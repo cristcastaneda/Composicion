@@ -61,9 +61,13 @@ public class Vuelo {
     }
     public void desembarcar (String codigoAsiento){
         for(Asiento a: asientos) {
-            if(a.getCodigo)
+            if(a.getCodigo().equals(codigoAsiento)){
+                a.liberar();
+                return;
+            }
 
         }
+        System.out.println("Asiento " + codigoAsiento + " no encontrado en vuelo " + numero + ".");
 
     }
 }
